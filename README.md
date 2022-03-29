@@ -54,5 +54,39 @@ in this video we program and design an IOT system that can measure ( light , tem
 ![](https://github.com/mohammadst99/IOT_Arduino_Labview/blob/main/test.gif)
 
 # Labview OutPut
+in the first tab we have come port , data buffer online and all data that sent to the PC with the port that was choosen and a key for START and Stop also in this tab we can see the baud rate of the serial port
+
+![](https://github.com/mohammadst99/IOT_Arduino_Labview/blob/main/Labview%20Images/tab1.png)
+
+in the second tab we have indicator for each part (the first one is humidity then we have distance and at the bottom of distance we have the light parameter and then we have tempreture
+![](https://github.com/mohammadst99/IOT_Arduino_Labview/blob/main/Labview%20Images/tab2.png)
 
 # Explain Labview 
+ in this part i explain the back of LABVIEW 
+ 
+ in the first part i adjusted the visa port (come , boudrate , I/O ,...) and the Output of Visa Terminal is Error and DATA 
+ 
+ then we have a part section and in this part we have and True/False section that we are able to control with a boolean key 
+ 
+ when it is true we have some delay ( because of our Module Time Responce )  
+ 
+ and we will send a "A" to the micro ( this command is determined for getting data from micro and also we have the other Visa Write to   control our relay with LABVIEW we can send 0,1 to the micro to turn ON/OFF our relay and also we have decimal indicator to show relay parameter as decimal integer 
+ 
+ ![](https://github.com/mohammadst99/IOT_Arduino_Labview/blob/main/Labview%20Images/3.png)
+ 
+ 
+ then you can see the other True/False section that you can adjust this part with START key in the tab 1
+ ![](https://github.com/mohammadst99/IOT_Arduino_Labview/blob/main/Labview%20Images/6.png)
+ 
+ 
+in this part we have to separate our data since we get our data from micro like this ( d25,t20,s40,p300 ) and 'd' is for distance 't' for temp 's' for humadity , 'p' for light so we have to split our data every where there is (',') and put them to the array se we use spreadsheet string to Array 
+
+![](https://github.com/mohammadst99/IOT_Arduino_Labview/blob/main/Labview%20Images/7.png)
+
+in the indicator part we have to get each data for each part separately for example we have to get (t20) for temp , (s30) for humadity ,(d20) for distance and  (p300) for the light and then we get the integer part to show with some Graphicy indicator
+ 
+ ![](https://github.com/mohammadst99/IOT_Arduino_Labview/blob/main/Labview%20Images/8.png)
+ 
+ 
+ 
+ 
